@@ -1,0 +1,304 @@
+/*Обнуление*/
+*,*:before,*:after{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+/*Стили для демонстрации*/
+/* html,body{
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+} */
+.wrapper{
+	height: 100%;
+	padding: 50px;
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 3fr; 
+	grid-template-rows: 1fr 10fr;
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "."
+    "."; 
+  width: 100%; 
+  height: 100%;
+	
+	font-family: "Aeroport";
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+.slider__content__wrapper {
+	width: 320px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 35px;
+}
+
+.slider__content__wrapper h1 {
+	font-size: 18px !important;
+  line-height: 25px !important;
+	font-weight: 600 !important;
+}
+
+.slider__content__wrapper h5 {
+	font-size: 12px !important;
+  line-height: 16px !important;
+
+	margin: 10px 0px !important;
+}
+
+.wrapper h1 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 15px;
+}
+
+.wrapper span {
+	font-style: normal;
+	font-weight: 900;
+	font-size: 10px;
+	line-height: 14px;
+}
+
+@media (max-width:767px){
+	.wrapper{padding: 50px 10px;}
+}
+
+/* Основные стили */
+
+/* Слайдер */
+.slick-slider{
+	min-width: 0;
+}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide{}
+/* Слайд активный */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+
+/* Точки */
+.slick-dots{
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li{}
+.slick-dots button{}
+
+/* Конкретный слайдер */
+.slider {
+	position: relative;
+	padding: 0px 60px;
+}
+
+@media (max-width:767px){
+	.slider {
+		padding: 0px 40px;
+	}
+}
+
+.slider .slick-arrow{
+	position: absolute;
+	top: 50%;
+	margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 30px;
+	height: 60px;
+}
+
+.slider .slick-arrow.slick-disabled{
+	opacity: 0.2;
+}
+
+.slider .slick-dots{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slider .slick-dots li{
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.slick-dots li button {
+	font-size: 0;
+	line-height: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	padding: 5px;
+	cursor: pointer;
+	color: transparent;
+	border: 0;
+	outline: none;
+	background: transparent;
+}
+
+.slick-dots li button:before {
+	font-family: 'slick';
+	font-size: 24px;
+	line-height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	content: '•';
+	text-align: center;
+	opacity: 1;
+	color: rgb(255, 255, 255);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.slider .slick-dots li.slick-active button{
+	
+}
+
+.slider__item {
+	padding: 0px 15px;
+}
+.slider__item img{
+	max-width: 100%;
+}
+.slider__item.slick-center{
+	
+}
+
+
+.item__content {
+	border: 1px solid #575757;
+	position: relative;
+}
+
+.item__content__wrapper{
+	padding: 27px 17px;
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+	z-index: 2;
+	background-color: #000000;
+}
+
+.item__content::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	margin: -5px;
+	border-radius: inherit;
+	background: linear-gradient(90deg, rgba(119,30,225,1) 29%, rgba(0,4,255,1) 100%);
+}
+
+.item__content__wrapper span {
+	margin-top: auto;
+}
+
+/* Styles */
+
+@media screen and (max-width: 490px) {
+
+	.wrapper {
+    padding: 36px 10px;
+	}
+
+	.vacancy-root {
+		padding-top: 0px !important;
+	
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: flex-start !important;
+
+		width: 100% !important;
+		background: #000000 !important;
+	
+		color: #ffffff !important;
+		box-sizing: border-box !important;
+	}
+	.vacancy_header h1 {
+     margin-left: 40px;
+		 font-size: 24px;
+		line-height: 33px;
+	}
+	.slick-dots li.slick-active button:before {
+    opacity: 1 !important;
+    color: #7B68EE !important;
+  }
+	.slick-dots {
+    width: auto !important;
+    left: 116px !important;
+	}
+	.slider {
+		position: relative !important;
+    min-width: 0 !important;
+    padding: 0 36px !important;
+		height: 150px;
+	}
+	.slick-dots li button:before {
+    opacity: 1 !important;
+    color: #FFFFFF !important;
+	}
+	.vacancy-requirements-item img {
+		width: 15px;
+    height: 16px;
+		margin-right: 15px;
+	}
+	.vacancy-requirements-item {
+		display: flex;
+		justify-content: center;
+
+		margin: 5px 0px;
+	}
+	.vacancy-requirements-item p {
+    font-size: 10px !important;
+		line-height: 14px !important;
+	}
+	.vacancy-requirements {
+		display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+	}
+}
